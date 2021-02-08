@@ -44,4 +44,4 @@ Pockels = GraphTemplate(Title = "Signal de la photodiode en fonction de la tensi
                         )
 Pockels.AddData(data_x, data_y, label="Signal de la photodiode")
 Pockels.Plot(MajXTicks=60,MinXTicks=15,MajYTicks=60,MinYTicks=15)
-Pockels.Save()
+Pockels.Save(name="Pockels1",format="pdf")

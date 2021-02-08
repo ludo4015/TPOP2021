@@ -47,11 +47,11 @@ class GraphTemplate:
         plt.show(fig)
         self.fig = fig
     
-    def Save(self, format = "png", dpival = 600):
+    def Save(self, name, format = "png", dpival = 600):
         if format == "png":
-            self.fig.savefig("Pockels.png",bbox_inches='tight',dpi=dpival)
+            self.fig.savefig(f'{name}.png',bbox_inches='tight',dpi=dpival)
         if format == "pdf":
-            self.fig.savefig("Pockels.pdf",bbox_inches='tight')
+            self.fig.savefig(f"{name}.pdf",bbox_inches='tight')
 
 
 
