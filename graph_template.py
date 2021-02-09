@@ -32,8 +32,14 @@ class GraphTemplate:
                 Xmax = max(data[0])
             if Ymax == None or max(data[1]) > Ymax:
                 Ymax = max(data[1])
-        plt.xlabel(f'{self.Xname} [{self.Xunits}]',fontsize=12)
-        plt.ylabel(f'{self.Yname} [{self.Yunits}]',fontsize=12)
+        if self.Xunits == False:
+            plt.xlabel(f'{self.Xname}',fontsize=12)
+        else:
+            plt.xlabel(f'{self.Xname} [{self.Xunits}]',fontsize=12)
+        if self.Yunits == False:
+            plt.ylabel(f'{self.Yname}',fontsize=12)
+        else:
+            plt.ylabel(f'{self.Yname} [{self.Yunits}]',fontsize=12)
         plt.title(self.Title, fontweight = "bold",fontsize=12)
         plt.legend(loc = "lower right",bbox_to_anchor=(1.45, 0.1),fancybox=True, shadow=True)
         if MajXTicks != None:
