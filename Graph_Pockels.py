@@ -34,13 +34,12 @@ from graph_template import GraphTemplate
 """
 data_x = [15,30,45,60,75,90,105,120,135,150,165,180,195,210,225,240,255,270,285,300,315,330,345,360,375,390]
 data_y = [540,520,490,440,405,380,370,290,220,195,160,95,90,30,20,10,30,60,80,100,140,180,220,240,460,390]
-print(len(data_x),len(data_y))
 
 Pockels = GraphTemplate(Title = "Signal de la photodiode en fonction de la tension DC appliquée à la cellule de Pockels",
                         Xname = "Tension DC appliquée à la cellule de Pockels",
                         Xunits = "V",
                         Yname = "Signal affiché sur l'oscilloscope",
-                        Yunits = "mV"
+                        Yunits = False
                         )
 Pockels.AddData(data_x, data_y, label="Signal de la photodiode")
 Pockels.Plot(MajXTicks=60,MinXTicks=15,MajYTicks=60,MinYTicks=15)
